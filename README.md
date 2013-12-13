@@ -26,7 +26,14 @@ Set styles for your container:
 Use it how jQuery-plugin with options:
 ```JavaScript
 $("#container").verticalCenter({
-	
+    /** Optional: min height of client window (default: 420) */
+    minClientHeight : 420,
+    /** Optional: displacement of top position (default: 0) */
+    topOffset : 0,
+    /** Optional: change position on resize client window (default: false) */
+    onResize : false,
+    /** Optional: callback after set position */
+    callback : function () { }
 });
 ```
 

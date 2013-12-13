@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+
+<html>
+<head>
+<title>jQueryVerticalCenter</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+
+<body>
+
+	<style>
+		html { /*background: url(/stuff/woodbg.jpg) top center repeat;*/ background-image: url(/stuff/pattern.gif); }
+		#container { width: 200px; height: 200px; border-radius:10px; background-color: rgba(255,255,255,0.8); background-image: url(/stuff/heart.png); background-position: center; background-repeat: no-repeat; position: absolute; left:50%; margin-left: -100px; display: none;}
+	</style>
+	
+	<div id="container"></div>
+
+	<script type="text/javascript" src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+	<script type="text/javascript" src="jquery.vcenter.js"></script>
+
+	<script type="text/javascript">
+		$(function () {
+			$("#container").verticalCenter({
+				onResize 		: true,
+				callback 		: function () {
+					$(this).fadeIn(2000);
+				}
+			});
+		});
+	</script>
+
+</body>
+</html>

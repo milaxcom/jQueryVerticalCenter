@@ -25,7 +25,7 @@
 				options.height = $(this).outerHeight();
 
 			/** Высота рабочей области экрана */
-			var cHeight = $(window).height();
+			var cHeight = $("body").height();
 			if (cHeight < options.minClientHeight) cHeight = options.minClientHeight;
 
 			/** Вычисление основного top параметра */
